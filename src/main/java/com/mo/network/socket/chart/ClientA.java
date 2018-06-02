@@ -12,7 +12,7 @@ public class ClientA {
         baseClient.scan();
         try {
             baseClient.listen();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

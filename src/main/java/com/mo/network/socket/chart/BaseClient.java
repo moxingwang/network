@@ -31,45 +31,49 @@ public class BaseClient {
     }
 
     public void scan() {
-        Scanner scan = new Scanner(System.in); // 从键盘接收数据
-        String str = scan.next();  // 接收数据
-        do {
-            SocketUtil.send(serverIp, serverPort, JSON.toJSONString(new Message(clientName, toClientIp, toClientPort, str)));
-        } while ((str = scan.next()) != null);
+        new Thread(()->{
+            Scanner scan = new Scanner(System.in); // 从键盘接收数据
+            String str = scan.next();  // 接收数据
+            do {
+                SocketUtil.send(serverIp, serverPort, JSON.toJSONString(new Message(clientName, toClientIp, toClientPort, str)));
+            } while ((str = scan.next()) != null);
+        }).start();
     }
 
     public void listen() throws IOException {
         ServerSocket serverSocket = new ServerSocket(clientPort);
 
-        Socket socket = serverSocket.accept();
+        while (true){
+            Socket socket = serverSocket.accept();
 
-        BufferedReader bufferedReader = null;
-        try {
-            bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-
-            String message = "";
-            String line = bufferedReader.readLine();
-            while (line != null) {
-                message += line;
-                line = bufferedReader.readLine();
-            }
-
-            Message messageResult = JSONObject.parseObject(message, Message.class);
-
-
-            System.out.println("来自" + messageResult.getFromClientName() + "的消息：" + messageResult.getMessage());
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
+            BufferedReader bufferedReader = null;
             try {
-                bufferedReader.close();
+                bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+
+                String message = "";
+                String line = bufferedReader.readLine();
+                while (line != null) {
+                    message += line;
+                    line = bufferedReader.readLine();
+                }
+
+                Message messageResult = JSONObject.parseObject(message, Message.class);
+
+
+                System.out.println("来自" + messageResult.getFromClientName() + "的消息：" + messageResult.getMessage());
             } catch (IOException e) {
                 e.printStackTrace();
-            }
-            try {
-                socket.close();
-            } catch (IOException e) {
-                e.printStackTrace();
+            } finally {
+                try {
+                    bufferedReader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    socket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
