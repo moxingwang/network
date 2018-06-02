@@ -1,4 +1,4 @@
-package com.mo.test;
+package com.mo.network;
 
 /**
  * Created by MoXingwang on 2017/6/4.

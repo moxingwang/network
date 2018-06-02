@@ -1,4 +1,4 @@
-package com.mo.test.mybatisgenerator;
+package com.mo.network.mybatisgenerator;
 
 import org.mybatis.generator.api.CommentGenerator;
 import org.mybatis.generator.api.IntrospectedColumn;

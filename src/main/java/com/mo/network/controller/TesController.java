@@ -1,6 +1,6 @@
-package com.mo.test.controller;
+package com.mo.network.controller;
 
-import com.mo.test.service.TestService;
+import com.mo.network.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

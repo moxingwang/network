@@ -1,4 +1,4 @@
-package com.mo.test;
+package com.mo.network;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.log4j.Logger;
@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 
 @EnableAutoConfiguration
 @SpringBootApplication
-@MapperScan("com.mo.test.mapper")
+@MapperScan("com.mo.network.mapper")
 public class Application {
     private static Logger logger = Logger.getLogger(Application.class);
 

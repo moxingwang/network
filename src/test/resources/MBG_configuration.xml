@@ -4,8 +4,8 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
     <context id="MySQLTables" targetRuntime="MyBatis3">
-        <plugin type="com.mo.test.mybatisgenerator.MySQLGeneratorPrimaryKeyPlugin"></plugin>
-        <commentGenerator type="com.mo.test.mybatisgenerator.MyCommentGenerator">
+        <plugin type="com.mo.network.mybatisgenerator.MySQLGeneratorPrimaryKeyPlugin"></plugin>
+        <commentGenerator type="com.mo.network.mybatisgenerator.MyCommentGenerator">
         </commentGenerator>
         <!-- 生发环境数据库配置:修改配置 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
@@ -16,7 +16,7 @@
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
         <!--targetProject请使用绝对路径-->
-        <javaModelGenerator targetPackage="com.mo.test.entity"
+        <javaModelGenerator targetPackage="com.mo.network.entity"
                             targetProject="D:\Workspace\mine\sharding-jdbc-test\jdbc-mapper\src\main\java">
             <property name="enableSubPackages" value="true"/>
 
@@ -26,7 +26,7 @@
                          targetProject="D:\Workspace\mine\sharding-jdbc-test\jdbc-mapper\src\main\resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.mo.test.mapper"
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.mo.network.mapper"
                              targetProject="D:\Workspace\mine\sharding-jdbc-test\jdbc-mapper\src\main\java">
 
             <property name="enableSubPackages" value="true"/>

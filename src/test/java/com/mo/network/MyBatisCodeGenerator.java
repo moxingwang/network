@@ -1,4 +1,4 @@
-package com.mo.test;
+package com.mo.network;
 
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;
@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * 本类不用修改，运行就行
- * 具体配置，请修改 src/test/resources/MBG_configuration.xml
+ * 具体配置，请修改 src/network/resources/MBG_configuration.xml
  */
 public class MyBatisCodeGenerator {
     public static void main(String[] args) throws Exception {

@@ -1,4 +1,4 @@
-package com.mo.test.mapper;
+package com.mo.network.mapper;
 
 /**
  * Created by MoXingwang on 2017/6/4.

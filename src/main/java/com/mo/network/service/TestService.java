@@ -1,4 +1,4 @@
-package com.mo.test.service;
+package com.mo.network.service;
 
 import org.springframework.stereotype.Service;
 
