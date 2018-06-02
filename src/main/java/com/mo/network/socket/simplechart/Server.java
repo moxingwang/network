@@ -1,4 +1,4 @@
-package com.mo.network.socket.chart;
+package com.mo.network.socket.simplechart;
 
 import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;

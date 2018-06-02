@@ -1,4 +1,4 @@
-package com.mo.network.socket.chart;
+package com.mo.network.socket.simplechart;
 
 import java.io.OutputStreamWriter;
 import java.io.Writer;

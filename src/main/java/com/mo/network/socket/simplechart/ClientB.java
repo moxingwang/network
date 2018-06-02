@@ -1,20 +1,21 @@
-package com.mo.network.socket.chart;
+package com.mo.network.socket.simplechart;
 
 import java.io.IOException;
 
 /**
  * @author MoXingwang on 2018/6/2.
  */
-public class ClientA {
+public class ClientB {
     public static void main(String args[]) {
 
-        BaseClient baseClient = new BaseClient("127.0.0.1", Server.SERVER_PORT, "127.0.0.1", 54100, 54101,"小明");
+        BaseClient baseClient = new BaseClient("127.0.0.1", Server.SERVER_PORT, "127.0.0.1", 54101, 54100, "小红");
         baseClient.scan();
         try {
             baseClient.listen();
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
 
