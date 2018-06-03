@@ -31,7 +31,7 @@ public class ClientThread extends Thread{
 				e.printStackTrace();
 				isConnect = false;
 				System.out.println("Out!");
-				ClientManager.getInstance().removeClient(clientSocket);
+				ClientManager.removeClient(clientSocket);
 			}
 		}
 	}

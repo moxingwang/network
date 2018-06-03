@@ -1,42 +1,23 @@
 package com.mo.network.socket.persistent.manager;
 
 import java.net.Socket;
-import java.util.HashSet;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class ClientManager {
 
-	private static volatile ClientManager clientManagerInstance;
-	private HashSet<Socket> clientSet;
-	
-	private ClientManager() {
-		clientSet = new HashSet<Socket>();
-	}
-	
-	public static ClientManager getInstance() {
-		if (clientManagerInstance == null) {
-			synchronized (ClientManager.class) {
-				if (clientManagerInstance == null) {
-					clientManagerInstance = new ClientManager();
-				}
-			}
-		}
-		return clientManagerInstance;
-	}
-	
-	public synchronized void addClient(Socket client) {
-		if (!clientSet.contains(client)) {
-			clientSet.add(client);
-		}
-	}
-	
-	public synchronized void removeClient(Socket client) {
-		if (clientSet.contains(client)) {
-			clientSet.remove(client);
-		}
-	}
-	
-	public synchronized int getClientCount() {
-		return clientSet.size();
-	}
-	
+
+    private static final ConcurrentHashMap<Socket, Object> map = new ConcurrentHashMap<>();
+
+    public static void addClient(Socket client) {
+        map.put(client, null);
+    }
+
+    public static void removeClient(Socket client) {
+        map.remove(client);
+    }
+
+    public static int getClientCount() {
+        return map.keySet().size();
+    }
+
 }
