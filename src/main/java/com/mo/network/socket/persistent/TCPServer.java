@@ -8,6 +8,9 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * 长连接server
+ */
 public class TCPServer {
 
     public static void main(String[] args) {
