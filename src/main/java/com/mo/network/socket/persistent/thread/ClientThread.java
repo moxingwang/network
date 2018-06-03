@@ -1,7 +1,8 @@
 package com.mo.network.socket.persistent.thread;
 
-import com.wyl.simpletcp.manager.ClientManager;
-import com.wyl.simpletcp.utils.SocketUtil;
+
+import com.mo.network.socket.persistent.manager.ClientManager;
+import com.mo.network.socket.persistent.utils.SocketUtil;
 
 import java.io.IOException;
 import java.net.Socket;

@@ -1,7 +1,8 @@
 package com.mo.network.socket.persistent;
 
-import com.wyl.simpletcp.config.NetworkConfig;
-import com.wyl.simpletcp.utils.SocketUtil;
+
+import com.mo.network.socket.persistent.config.NetworkConfig;
+import com.mo.network.socket.persistent.utils.SocketUtil;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
