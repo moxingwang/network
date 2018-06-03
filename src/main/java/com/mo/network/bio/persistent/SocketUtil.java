@@ -1,4 +1,4 @@
-package com.mo.network.socket.persistent;
+package com.mo.network.bio.persistent;
 
 import com.mo.network.util.ByteUtil;
 

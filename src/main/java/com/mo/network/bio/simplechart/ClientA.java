@@ -1,4 +1,4 @@
-package com.mo.network.socket.simplechart;
+package com.mo.network.bio.simplechart;
 
 /**
  * @author MoXingwang on 2018/6/2.
