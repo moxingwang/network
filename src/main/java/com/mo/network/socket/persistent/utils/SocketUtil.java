@@ -34,6 +34,7 @@ public class SocketUtil {
 	public static byte[] readData(Socket socket) throws IOException {
 		// 前四个字节表示实际传送数据大小
 		byte[] sizeBytes = new byte[4];
+		//线程阻塞
 		socket.getInputStream().read(sizeBytes, 0, 4);
 		// 读取实际传送数据
 		int dataSize = ByteUtil.bytesToInt(sizeBytes);
