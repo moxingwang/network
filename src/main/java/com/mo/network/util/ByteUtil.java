@@ -1,4 +1,4 @@
-package com.mo.network.socket.persistent.utils;
+package com.mo.network.util;
 
 public class ByteUtil {
 

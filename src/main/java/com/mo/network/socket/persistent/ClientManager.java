@@ -1,4 +1,4 @@
-package com.mo.network.socket.persistent.manager;
+package com.mo.network.socket.persistent;
 
 import java.net.Socket;
 import java.util.concurrent.ConcurrentHashMap;

@@ -1,9 +1,6 @@
 package com.mo.network.socket.persistent;
 
 
-import com.mo.network.socket.persistent.config.NetworkConfig;
-import com.mo.network.socket.persistent.utils.SocketUtil;
-
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.Socket;
@@ -28,7 +25,7 @@ public class TCPClient {
                 @Override
                 public void run() {
                     try {
-                        SocketAddress socketAddress = new InetSocketAddress(NetworkConfig.SERVER_HOST, NetworkConfig.SERVER_PORT);
+                        SocketAddress socketAddress = new InetSocketAddress("127.0.0.1", 55101);
                         clientSocket.connect(socketAddress);
                         state = TCPClient.STATE_CONNECTED;
                         processLoop();
