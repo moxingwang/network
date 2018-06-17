@@ -47,11 +47,11 @@
 
 # JAVA 网络IO
 * bio
-> 
+> 同步阻塞。
 * aio
-> 
+> 异步非阻塞。
 * nio
->
+> 同步非阻塞。
 
 # NIO
 
@@ -63,6 +63,10 @@
 # 学习资料
 * [如何学习Java的NIO？](https://www.zhihu.com/question/29005375)
 * [基于NIO的长连接的实现已开放到github](https://blog.csdn.net/yangbutao/article/details/18505831)
+* [Java 中 BIO、NIO、AIO 模型的对比](http://patchouli-know.com/2017/03/18/java-bio-nio-aio/)
+* [julyerr Blog java AIO]（http://julyerr.club/2018/02/22/aio/）
+* [julyerr Blog java NIO](http://julyerr.club/2018/02/20/nio/)
+* [BIO与NIO、AIO的区别(这个容易理解)](https://blog.csdn.net/skiof007/article/details/52873421)
 * [慕课网 Netty入门之WebSocket初体验](https://www.imooc.com/search/?words=netty)
 * [关于BIO和NIO的理解](https://www.cnblogs.com/zedosu/p/6666984.html)
 * [TCP/IP、Http、Socket的关系理解](https://blog.csdn.net/qq_35181209/article/details/75212533)
