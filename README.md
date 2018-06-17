@@ -45,7 +45,7 @@
 * 异步I/O （asynchronous I/O (the POSIX aio_functions)）
 > 调用函数直接返回继续执行，读写结果其它方式通知。
 
-# JAVA IO
+# JAVA 网络IO
 * bio
 > 
 * aio
